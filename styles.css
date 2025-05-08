@@ -1,0 +1,233 @@
+/* CSS styles for the CV page */
+
+/* General body styles */
+body {
+    /* Uses Arial font for simplicity and availability */
+    font-family: Arial, sans-serif; 
+    /* Removes default margin around the body */
+    margin: 0; 
+    /* Light blue-gray background for a modern look */
+    background-color: #e6f1fa;
+    /* Dark gray text color for readability */ 
+    color: #444; 
+}
+
+/* Styles for dark mode */
+body.dark-mode {
+    /* Dark blue-gray background for dark mode */
+    background-color: #2c3e50; 
+    /* Light text color for dark mode */
+    color: #ecf0f1; 
+}
+
+/* Header bar at the top */
+.header-bar {
+     /* Blue background for the header bar */
+    background-color: #3499db;
+    /* White text color for the header bar */
+    color: #fff; 
+    /* Adds padding to the header bar */
+    padding: 10px 20px; 
+    /* Uses flexbox for layout */
+    display: flex; 
+    /* Spaces out the title and button */
+    justify-content: space-between; 
+    /* Centers items vertically */
+    align-items: center; 
+}
+
+/* Dark mode styles for the header bar */
+body.dark-mode .header-bar {
+    /* Darker background for header bar in dark mode */
+    background-color: #1c2425; 
+}
+
+/* Main container for CV content */
+.container {
+    /* Sets container width to 85% of the page */
+    width: 85%; 
+    /* Limits maximum width for larger screens */
+    max-width: 900px; 
+    /* Centers the container with 20px top/bottom margin */
+    margin: 20px auto; 
+    /* Adds internal padding */
+    padding: 20px; 
+    /* White background for the container */
+    background-color: #fff; 
+    /* Adds rounded corners for a softer look */
+    border-radius: 8px; 
+    /* Adds a subtle shadow for depth */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+/* Dark mode styles for the container */
+body.dark-mode .container {
+    /* Darker background for container in dark mode */
+    background-color: #34495e; 
+     /* Darker shadow in dark mode */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Styles for the header section */
+header {
+    /* Centers text in the header */
+    text-align: center; 
+    /* Adds space below the header */
+    margin-bottom: 20px; 
+}
+
+/* Styles for section titles (h2) */
+h2 {
+    /* Blue color for section titles */
+    color: #3498db; 
+    /* Blue bottom border for titles */
+    border-bottom: 2px solid #3498db; 
+    /* Adds padding below the title */
+    padding-bottom: 8px; 
+     /* Adds space below the title */
+    margin-bottom: 15px;
+    /* Increases font size for prominence */
+    font-size: 1.5em; 
+}
+
+/* Dark mode styles for section titles */
+body.dark-mode h2 {
+     /* Lighter blue for titles in dark mode */
+    color: #74b9ff;
+     /* Matching border color */
+    border-bottom-color: #74b9ff;
+}
+
+/* Styles for subsection titles (h3) */
+h3 {
+    /* Dark gray color for subsection titles */
+    color: #333; 
+    /* Adds space above subsection titles */
+    margin-top: 15px; 
+}
+
+/* Dark mode styles for subsection titles */
+body.dark-mode h3 {
+    /* Light text color for subsections in dark mode */
+    color: #ecf0f1; 
+}
+
+/* Styles for lists */
+ul {
+     /* Adds vertical margin to lists */
+    margin: 10px 0;
+    /* Adds left padding for list items */
+    padding-left: 25px; 
+}
+
+/* Styles for list items */
+li {
+    /* Adds space between list items */
+    margin-bottom: 8px; 
+}
+
+/* Styles for links */
+a {
+    /* Blue color for links */
+    color: #2980b9; 
+    /* Removes default underline */
+    text-decoration: none; 
+    /* Smooth color transition on hover */
+    transition: color 0.3s; 
+}
+
+/* Dark mode styles for links */
+body.dark-mode a {
+    /* Lighter blue for links in dark mode */
+    color: #74b9ff; 
+}
+
+/* Hover effect for links */
+a:hover {
+    /* Red color on hover for contrast */
+    color: #e74c3c; 
+     /* Underlines links on hover */
+    text-decoration: underline;
+}
+
+/* Styles for buttons */
+button {
+    /* Adds padding to buttons */
+    padding: 8px 15px; 
+    /* Blue background for buttons */
+    background-color: #3498db; 
+    /* White text for buttons */
+    color: #fff; 
+    /* Removes default border */
+    border: none; 
+    /* Adds rounded corners to buttons */
+    border-radius: 5px; 
+    /* Shows pointer cursor on hover */
+    cursor: pointer; 
+    /* Smooth background transition */
+    transition: background-color 0.3s; 
+}
+
+/* Dark mode styles for buttons */
+body.dark-mode button {
+    /* Lighter blue background in dark mode */
+    background-color: #74b9ff; 
+}
+
+/* Hover effect for buttons */
+button:hover {
+    /* Darker blue on hover */
+    background-color: #2980b9; 
+}
+
+/* Hides elements with the hidden class */
+.hidden {
+    /* Hides the element */
+    display: none; 
+}
+
+/* Styles for sections */
+section {
+   /* Adds space below each section */
+    margin-bottom: 20px; 
+}
+
+/* Styles for contact info and links with icons */
+.contact-info p {
+    /* Adds vertical margin to contact info */
+    margin: 5px 0; 
+}
+
+/* Styles for Font Awesome icons */
+.fa {
+    /* Adds space between icon and text */
+    margin-right: 8px; 
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        /* Increases container width on small screens */
+        width: 95%; 
+        /* Reduces padding for small screens */
+        padding: 15px; 
+    }
+    h1 {
+        /* Reduces main title size on small screens */
+        font-size: 1.8em; 
+    }
+    h2 {
+        /* Reduces section title size */
+        font-size: 1.3em; 
+    }
+    .header-bar {
+        /* Stacks header bar items vertically */
+        flex-direction: column; 
+        /* Centers text in header bar */
+        text-align: center; 
+    }
+    .header-bar button {
+         /* Adds space above button in header bar */
+        margin-top: 10px;
+    }
+}
