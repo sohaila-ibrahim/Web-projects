@@ -1,0 +1,30 @@
+*{
+    margin : 0;
+    
+}
+.container{
+    width :120px;
+    height :100vh;
+    background :mediumpurple;
+    color : white;
+}
+.container p{
+    padding: 6px;
+}
+.container p:hover , button:hover {
+    background :rgb(69, 69, 88);
+    curser :pointer;
+}
+button{
+    background :mediumpurple;
+    color :white;
+    border : none;
+    border-radius: 5px;
+}
+#close{
+    position: absolute;
+    left :125px;
+}
+.hide{
+    display:none;
+}
