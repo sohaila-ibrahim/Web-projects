@@ -150,19 +150,20 @@ function getAvatarColor(name) {
     return AVATAR_COLORS[Math.abs(hash) % AVATAR_COLORS.length];
 }
 
-
-var badges = "";
-if (showBadges && contact.contactFav) {
-    badges += `<span style="position:absolute;top:-4px;right:-4px;width:20px;height:20px;border-radius:50%;
+// Build Avatar Function
+function buildAvatar(contact, size, showBadges) {
+    var badges = "";
+    if (showBadges && contact.contactFav) {
+        badges += `<span style="position:absolute;top:-4px;right:-4px;width:20px;height:20px;border-radius:50%;
                         background:#ffc107;display:flex;align-items:center;justify-content:center;font-size:10px;
                         box-shadow:0 0 0 2px #fff;">★</span>`;
-}
-if (showBadges && contact.contactEmarg) {
-    badges += `<span style="position:absolute;bottom:-4px;right:-4px;width:20px;height:20px;border-radius:50%;
+    }
+    if (showBadges && contact.contactEmarg) {
+        badges += `<span style="position:absolute;bottom:-4px;right:-4px;width:20px;height:20px;border-radius:50%;
                         background:#dc3545;color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;
                         box-shadow:0 0 0 2px #fff;">♥</span>`;
-}
-return `<div style="position:relative;width:${size}px;height:${size}px;flex-shrink:0;">
+    }
+    return `<div style="position:relative;width:${size}px;height:${size}px;flex-shrink:0;">
                 <div class="rounded-4 d-flex align-items-center justify-content-center"
                     style="width:${size}px;height:${size}px;background:${getAvatarColor(
                       contact.contactName,
