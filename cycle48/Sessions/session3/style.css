@@ -1,0 +1,20 @@
+.gallery{
+  background-color:blue;
+  text-align: center;
+
+}
+.gallery__item{
+  background-color: aqua;
+  width: 25%;
+  float: left;
+}
+.gallery__item img{
+  width: 100%;
+
+}
+.clear-fix{
+  clear: both;
+}
+h3{
+
+}

@@ -1,0 +1,20 @@
+.demo{
+  background-color: blanchedalmond;
+  margin: auto;
+  width:60% ;
+  
+ 
+  
+}
+.demo2 img{
+  background-color: blueviolet;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(50%-20px)
+  float: left;
+  
+}
+.clear-fix
+{
+  clear: both;
+}

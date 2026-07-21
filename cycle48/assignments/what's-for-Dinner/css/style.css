@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: rgb(255, 252, 234);
+    color: #2b2b2b;
+}
+
+
+/* -- Navbar -- */
+
+.logo-icon-container {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #ff7a45, #ff9a56);
+}
+
+.logo-text h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.logo-text p {
+    font-size: 13px;
+    color: #8a8a8a;
+}
+
+.navbar-nav {
+    gap: 18px;
+}
+
+.navbar-nav .nav-link {
+    color: #555;
+    padding: 0;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ff7a45;
+}
+
+.profile-img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border: 2px solid #ff7a45;
+}
+
+
+/* -- Recipe card wrapper -- */
+
+#recipeHolder {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* -- Recipe image + overlays -- */
+
+#recipe-image {
+    min-height: 400px;
+}
+
+.ratings {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 8px 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    font-weight: 700;
+}
+
+#ratings-quantity {
+    font-weight: 400;
+    color: #8a8a8a;
+}
+
+.extra-info {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 14px 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.extra-info i {
+    color: #ff7a45;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.extra-info p {
+    margin: 0;
+    font-size: 12px;
+    color: #8a8a8a;
+}
+
+.extra-info p:last-child {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+
+/* -- Recipe text side -- */
+
+.text-part {
+    padding: 26px 30px;
+}
+
+#recipe-name {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 8px 0 6px;
+}
+
+#recipe-description {
+    color: #666;
+    font-size: 14px;
+}
+
+#servings-logo {
+    color: #2b7fff;
+}
+
+#cook-time-logo {
+    color: rgb(251, 95, 103);
+}
+
+
+/* Recipe badges (Easy / Asian...) */
+
+.recipe-badge {
+    display: inline-block;
+    padding: 5px 14px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#difficulty-level {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+#category {
+    background: #f3e8ff;
+    color: #9333ea;
+}
+
+
+/* Bookmark / Share icons */
+
+.icon-container.main-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #fff6ef;
+    color: #ff7a45;
+    cursor: pointer;
+}
+
+
+/* Time warning */
+
+#time-warning {
+    background: #fef2f2;
+    color: #b91c1c;
+    gap: 12px;
+}
+
+#time-warning i {
+    color: #dc2626;
+    font-size: 18px;
+}
+
+#time-warning p:first-child {
+    font-weight: 700;
+    margin: 0;
+}
+
+#time-warning p:last-child {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* -- Tabs -- */
+
+#myTab {
+    border-bottom: 2px solid #f1f1f1;
+}
+
+#myTab .nav-link {
+    border: none;
+    color: #8a8a8a;
+    font-weight: 600;
+    background: transparent;
+}
+
+#myTab .nav-link.active {
+    color: #ff7a45;
+    border-bottom: 3px solid #ff7a45;
+}
+
+
+/* -- Ingredients / Instructions -- */
+
+#ingredients-section,
+#instructions-section {
+    background: #fff6ef;
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+
+/* Custom scrollbar (Chrome/Edge/Safari) */
+
+#ingredients-section::-webkit-scrollbar,
+#instructions-section::-webkit-scrollbar {
+    width: 6px;
+}
+
+#ingredients-section::-webkit-scrollbar-track,
+#instructions-section::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#ingredients-section::-webkit-scrollbar-thumb,
+#instructions-section::-webkit-scrollbar-thumb {
+    background: #ffb08a;
+    border-radius: 10px;
+}
+
+
+/* Firefox */
+
+#ingredients-section,
+#instructions-section {
+    scrollbar-width: thin;
+    scrollbar-color: #ffb08a transparent;
+}
+
+#ingredients-list li,
+#instructions-list li {
+    margin-bottom: 14px;
+    font-size: 16px;
+}
+
+#ingredients-list .icon-container,
+#instructions-list .icon-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    background: #ff7a45;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+
+/* -- Nutrition cards -- */
+
+#nutrition-list {
+    row-gap: 16px !important;
+}
+
+.nutrition-card .inner {
+    background: #f4f4f6;
+    padding: 18px 20px;
+    border-radius: 16px;
+}
+
+.nutrition-card .inner span:first-of-type {
+    font-size: 15px;
+    color: #374151;
+    font-weight: 500;
+}
+
+.nutrition-card .inner span:last-child {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.nutrition-card .icon-container {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    margin-right: 14px;
+    font-size: 17px;
+}
+
+
+/* Per-nutrient icon colors */
+
+.calories-card .icon-container {
+    background: #fde3ce;
+    color: #f97316;
+}
+
+.protein-card .icon-container {
+    background: #dbeafe;
+    color: #3b82f6;
+}
+
+.carbohydrates-card .icon-container {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.fat-card .icon-container {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+.fiber-card .icon-container {
+    background: #dcfce7;
+    color: #22c55e;
+}
+
+.sodium-card .icon-container {
+    background: #fce7f3;
+    color: #ec4899;
+}
+
+
+/* -- Chef's tips -- */
+
+#tips-list>div {
+    background: #fff6ef;
+    border-radius: 10px;
+    gap: 12px;
+}
+
+#tips-list i {
+    color: #16a34a;
+}
+
+
+/* -- Try Another Recipe button -- */
+
+.random-btn {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.random-btn button {
+    width: auto;
+    border: none;
+    background: linear-gradient(90deg, #ff7a45, #ff5757);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 14px rgba(255, 87, 87, 0.3);
+}
+
+.random-btn button i {
+    transition: transform 0.4s ease;
+}
+
+.random-btn button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 87, 87, 0.45);
+    opacity: 1;
+}
+
+.random-btn button:hover i {
+    transform: rotate(180deg);
+}
+
+.random-btn button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(255, 87, 87, 0.35);
+}
+
+@media (max-width: 991px) {
+    .visual-part {
+        height: 320px;
+    }
+    .text-part {
+        padding: 22px;
+    }
+}
